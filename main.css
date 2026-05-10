@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+.custom-list {
+  counter-reset: item;
+}
+
+.custom-list li {
+  counter-increment: item;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px gray solid;
+
+  
+}
+
+.custom-list li::before {
+  content: "0" counter(item);
+  color: gray;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.specs .card p::before{
+    content: "✓";
+    margin-right: 10px;
+}
+
+/* Base styles applied to all screen sizes */
+.menu-icon {
+    transition: all 0.5s;
+}
+
+header nav a:any-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+header nav a:hover, 
+header nav:focus {
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------------
+   MOBILE STYLES (Applies only to screens < 768px)
+   --------------------------------------------------- */
+@media (max-width: 767px) {
+    /* Hamburger Animations */
+    header:hover .menu-icon:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header:hover .menu-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+    header:hover .menu-icon:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Show mobile menu on hover/focus */
+    :is(header:hover, header:focus-within) nav {
+        display: block;
+    }
+
+    /* Mobile Menu Container Layout */
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        transform-origin: top center;
+        animation: showMenu 0.5s ease-in-out;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
+    }
+
+    header nav li {
+        padding: 0.5rem;
+        border-top: 1px solid gray;
+    }
+
+    header nav a {
+        width: 80%;
+        margin: auto;
+    }
+
+    header nav button {
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+/* Mobile Dropdown Animation */
+@keyframes showMenu {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.05); /* Slightly reduced from 1.2 for a smoother bounce */
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
