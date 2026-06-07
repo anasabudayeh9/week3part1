@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="made this website for learning purposes only">
+    <meta name="author" content="Anas Abu Dayah">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.whitepace.com">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#162456, #ffffff">
+    <meta name="keywords" content="productivity, collaboration, workspace, project management">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bd366d3bdd.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./src/CSS/style.css">    <title>Modern Website</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script type="module" src="/src/main.ts"></script>
+
+</head>
+<body class="min-h-screen">
+
+<header class="sticky top-0 z-50 w-full bg-white shadow-sm shadow-black/10 flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 h-auto md:h-24">
+    <div class="flex items-center justify-between h-20 w-full md:w-auto md:h-auto">
+        <figure>
+            <a href="index.html">
+                <img src="./src/images/logoimage.png" alt="Logo Image" id="logoimage" class="cursor-pointer w-16 lg:w-20">
+            </a>
+        </figure>
+        
+        <div id="menuBtn" class="menu-button cursor-pointer flex flex-col gap-1 md:hidden">
+            <span class="menu-icon block w-7 h-0.75 bg-black"></span>
+            <span class="menu-icon block w-7 h-0.75 bg-black"></span>
+            <span class="menu-icon block w-7 h-0.75 bg-black"></span>
+        </div>
+    </div>
+
+    <nav id="mobileMenu" class="hidden md:block md:static md:w-auto md:bg-transparent">
+        <ul class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 list-none py-4 md:py-0">
+            <li><a href="benefits.html" class="hover:text-lime-800 transition">Benefits</a></li> 
+            <li><a href="specification.html" class="hover:text-lime-800 transition">Specifications</a></li>
+            <li><a href="howTo.html" class="hover:text-lime-800 transition">How-to</a></li>
+            <li><a href="contactus.html" class="hover:text-lime-800 transition">Contact Us</a></li>
+            <li>
+                <button id="showMessage" class="w-40 h-12 rounded-full bg-lime-900 text-white font-bold transition hover:bg-lime-800">
+                    Learn More
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<main class="flex flex-col justify-center items-center gap-50">
+    <section class="section-fading  flex flex-col items-center justify-center gap-10 md:gap-28 w-full ">
+        <h1 class="font-semibold text-5xl md:text-8xl w-80 md:w-96 lg:w-lg h-36 text-center">Browse everything.</h1>
+
+        <figure>
+            <img src="./src/images/phone.png" alt="Phone picture" class="w-2xl h-auto px-3 md:hidden">
+            <img src="./src/images/disktop.png" alt="disktop" class=" w-full max-w-6xl h-auto px-3 hidden md:block lg:hidden">
+            <img src="./src/images/hugescreen.png" alt="hugescreen" class="w-full  max-w-7xl h-auto px-3 hidden lg:block">
+            <figcaption class="sr-only">Phone</figcaption>
+        </figure>
+    </section>
+
+       <section class="section-fading specs flex flex-col gap-7 lg:gap-12 justify-center items-center">
+            <p class="text-center lg:text-2xl">specs</p>
+            <h2 class="px-7 font-stretch-semi-condensed text-4xl lg:text-6xl text-center">Why Choose Area?</h2>
+            <p class="px-7 text-lg lg:text-xl font-light text-gray-900 text-center">You need a solution that keeps up. That’s 
+                why we developed Area. A developer-friendly approach to streamline your business. </p>
+            <button id="showMessage" class=" ml-7 w-40 lg:w-80 h-12 lg:h-20 lg:text-xl rounded-full bg-lime-200 font-bold hover:bg-lime-300 ">Discover More</button>
+
+            <div class="card-container flex flex-wrap  gap-4 lg:gap-20 justify-center items-center">
+                <div class="card transition-all duration-300 hover:translate-y-2 hover:shadow-xl hover:shadow-green-950 flex flex-col gap-7 justify-center items-center w-56 lg:w-72 rounded-2xl shadow-black shadow-sm">
+                    <h3 class="pt-5 text-2xl lg:text-3xl font-semibold">Area</h3>
+                    <hr class="w-full ">
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Seamless integration</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Full UTF-8 support</p>
+                </div>
+
+                <div class="card transition-all duration-300 hover:translate-y-2 hover:shadow-xl hover:shadow-green-950 flex flex-col gap-7 justify-center items-center w-56 lg:w-72 rounded-2xl shadow-black shadow-sm">
+                    <h3 class="pt-5 text-2xl lg:text-3xl font-semibold">WebSurge</h3>
+                    <hr class="w-full ">
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Seamless integration</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Full UTF-8 support</p>
+                </div>
+
+                <div class="card transition-all duration-300 hover:translate-y-2 hover:shadow-xl hover:shadow-green-950 flex flex-col gap-7 justify-center items-center w-56 lg:w-72 rounded-2xl shadow-black shadow-sm">
+                    <h3 class="pt-5 text-2xl lg:text-3xl font-semibold">HyperView</h3>
+                    <hr class="w-full ">
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Seamless integration</p>
+                    <p class="pb-8 font-serif lg:text-xl">Advanced AI insights</p>
+                    <p class="pb-8 font-serif lg:text-xl">Ultra-fast browsing</p>
+                    <p class="pb-8 font-serif lg:text-xl">Full UTF-8 support</p>
+                </div>
+            </div>
+
+            <figure class="px-5 mt-44  w-full">
+                <img src="./src/images/bharath-kumar-q3cEHSpaPfI-unsplash.jpg" alt="bharath-kumar-q3cEHSpaPfI-unsplash" class="rounded-2xl w-full h-80 md:h-96 lg:h-200">
+            </figure>
+
+            <article class="mt-24 flex flex-col gap-7 justify-center lg:start lg:items-start w-full">
+                <p class="px-7 text-xl md:text-2xl lg:text-3xl font-normal font-serif text-gray-900 text-left lg:w-250">“I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, 
+                    and the platform is so easy to use. I can't imagine running my company without it.”</p>
+                
+                    <p class="pl-7 text-lg lg:text-3xl font-light font-serif text-gray-900 text-left">John smith 
+                        <span class="text-sm lg:text-lg text-gray-500 font-light font-serif">Head of Data</span></p>
+            </article>
+
+        </section>
+
+
+</main>
+
+<footer class="flex flex-col justify-around static top-0 z-50 ">
+    <section class="px-7 flex flex-col md:flex-row gap-4 md:gap-10 mt-48">
+        <a class="font-semibold lg:text-xl lg:hover:text-2xl" href="benefits.html">Benifits</a>
+        <a class="font-semibold lg:text-xl lg:hover:text-2xl" href="specification.html">specifications</a>
+        <a class="font-semibold lg:text-xl lg:hover:text-2xl" href="howTo.html">How-to</a>
+    </section>
+
+    <section class="flex justify-between mt-20 items-end px-5">
+        <figure >
+            <img src="./src/images/footerpng.png" alt="footerpng" class="h-auto w-10 lg:w-12">
+            <figcaption class="sr-only">footerpng</figcaption>
+        </figure>
+        <p  id="copy" class=" font-light lg:text-xl"></p>
+        <p class="font-light lg:text-xl">All rights reserved</p>
+    </section>
+</footer>
+<section id="message" class="message fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4">
+    <div class="rounded-2xl bg-white w-full max-w-md p-8 flex flex-col gap-6 justify-center items-center shadow-2xl">
+        <p class="text-center text-gray-700 leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus magnam omnis et qui similique soluta vero unde, quam ipsum 
+            mollitia esse itaque cumque rerum! Perspiciatis facilis delectus error dicta!
+        </p>
+        <button id="closeMessage" type="button" class="bg-green-800 text-white font-medium px-12 py-2.5 rounded-lg hover:bg-green-900 transition w-full sm:w-auto">
+            OK
+        </button>
+    </div>
+</section>
+</body>
+</html>

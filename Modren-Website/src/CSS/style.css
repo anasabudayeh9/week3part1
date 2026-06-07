@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+
+.number{
+    opacity: 0;
+    animation: stepNumbers 4s ease-in-out infinite;
+
+}
+
+.number:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.number:nth-of-type(2) {
+  animation-delay: 3s;
+}
+
+.number:nth-of-type(3) {
+  animation-delay: 4s;
+}
+
+.custom-list {
+  counter-reset: item;
+}
+
+.custom-list li {
+  counter-increment: item;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px gray solid;
+}
+
+.custom-list li::before {
+  content: "0" counter(item);
+  color: gray;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.specs .card p::before{
+    content: "✓";
+    margin-right: 10px;
+}
+
+.menu-icon {
+    transition: all 0.5s;
+}
+
+header nav a:any-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+header nav a:hover, 
+header nav:focus {
+    transform: scale(1.1);
+}
+
+.message{
+    display: none;
+}
+
+.message.show{
+    display: block;
+}
+
+.section-fading{
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.custom-list li {
+    opacity: 0;
+    transition: 1.5s ease-in-out;
+}
+
+.custom-list li.show {
+    opacity: 1;
+}
+
+
+.section-fading.show{
+    opacity: 1;
+}
+
+#mobileMenu{
+    display: block;
+}
+
+#mobileMenu.active{
+    display: block;
+}
+
+@media (max-width: 767px) {
+
+
+#menuBtn.active .menu-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menuBtn.active .menu-icon:nth-child(2) {
+    opacity: 0;
+}
+
+#menuBtn.active .menu-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+   #mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    transform-origin: top center;
+    animation: showMenu 0.5s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+    #mobileMenu {
+        display: none;
+    }
+
+    #mobileMenu.active {
+        display: block;
+    }
+
+    header nav li {
+        padding: 0.5rem;
+        border-top: 1px solid gray;
+    }
+
+    header nav a {
+        width: 80%;
+        margin: auto;
+    }
+
+    header nav button {
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.05); 
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+@keyframes stepNumbers {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
